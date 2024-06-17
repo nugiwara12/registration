@@ -2,11 +2,14 @@
 
 
 namespace App\Http\Controllers\Auth;
+
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\RegistrationSuccessEmail;
 
 class RegisterController extends Controller
 {
@@ -21,9 +24,10 @@ class RegisterController extends Controller
 
         $user = $this->create($request->all());
 
-        // You may want to log the user in or redirect to a specific page
-        // Auth::login($user);
+        // Send registration success email
+        Mail::to($user->email)->send(new RegistrationSuccessEmail($user));
 
+        // Redirect to home page with the user's name
         return redirect('/')->with('name', $user->name);
     }
 
@@ -58,6 +62,4 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
-    
 }
-
