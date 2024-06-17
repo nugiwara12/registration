@@ -1,34 +1,37 @@
 .container {
-    max-width: 800px; /* Adjust the maximum width of the container as needed */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 0 20px; /* Add padding to the container */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the items horizontally within the container */
+    width: 100%;
+}
+.title-tag {
+    text-align: center;
 }
 
-/* Additional styling */
 .form-row {
     display: flex;
-    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
 .form-column {
-    flex: 0 0 48%; /* Initially, each column takes up 48% of the container */
-    margin-bottom: 10px; /* Add margin to create space between columns */
+    flex: 0 0 48%;
+    margin-bottom: 10px;
 }
 
 .form-column-full {
-    flex: 0 0 100%; /* Make this column take up 100% of the container width */
-    margin-bottom: 20px; /* Add margin to separate from other rows */
+    flex: 0 0 100%;
+    margin-bottom: 20px;
 }
 
-/* Add more specific styling for form inputs, labels, etc. */
 .form-group {
     margin-bottom: 10px;
 }
@@ -55,7 +58,6 @@
     color: red;
 }
 
-/* Base styles */
 .error-container {
     padding: 15px;
     border: 1px solid transparent;
@@ -83,9 +85,8 @@
     background-color: #0056b3;
 }
 
-/* Media queries for responsive layout */
 @media screen and (max-width: 768px) {
     .form-column {
-        flex: 0 0 100%; /* Make each column take up 100% of the container width on smaller screens */
+        flex: 0 0 100%;
     }
 }
