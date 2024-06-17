@@ -11,9 +11,9 @@
 
 <body>
     <div class="container">
-        <h1>Congratulations, you are now registered!</h1>
-        <p>Welcome, {{ $name }}, you have successfully registered.</p>
-
+        <p>Hello {{ $name }},</p>
+        <p>Your registration was successful!</p>
+        <!-- Add any additional content or styling here -->
     </div>
 </body>
 
