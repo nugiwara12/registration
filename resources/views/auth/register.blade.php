@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="form-container">
-            <h2>Register</h2>
+            <h2 class="title-tag">Register</h2>
 
             <div class="error-container">
                 @if ($errors->any())
